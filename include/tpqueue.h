@@ -29,10 +29,10 @@ public:
     }
     T& pop() {
       if (count == 0) {
-        thorw std:: string("Empty!")
+        thorw std::string("Empty!")
       } else {
          --count;
-        return arr[(first++ % size)];
+        return arr[first++ % size];
       }
     }
 };
