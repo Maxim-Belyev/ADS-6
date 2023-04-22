@@ -7,8 +7,8 @@ class TPQueue {
   T* arr;
   int first, last, count;
 
-public:
-  TPQueue(): arr(new T[size]), first(0),last(0),count(0) {}
+ public:
+  TPQueue(): arr(new T[size]), first(0), last(0), count(0) {}
   void push(const T & value) {
       if (count == size) {
         throw std::string("FULL!");
@@ -17,9 +17,9 @@ public:
       int m = last;
       for (int i = first; i < last; i++) {
         if (arr[i].prior < value.prior) {
-	  m = i;
-	  break;
-	}
+      m = i;
+      break;
+    }
       }
       for (int i = last; i > m; i--) {
         arr[i % size] = arr[(i - 1) % size];
