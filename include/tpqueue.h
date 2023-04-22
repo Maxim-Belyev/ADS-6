@@ -4,12 +4,11 @@
 #include <string>
 template<typename T, int size>
 class TPQueue {
- private:
-   T arr[size] = { 0 };
-   int first, last, count;
- public:
-    TQueue(): first(0),last(0),count(0) {}
-    void push(const T& value) {
+  T arr[size];
+  int first, last, count;
+public:
+  TQueue(): first(0),last(0),count(0) {}
+  void push(const T& value) {
       if (count == size) {
         throw std::string("FULL!");
       }
