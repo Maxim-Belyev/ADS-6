@@ -5,14 +5,14 @@
 template<typename T, int size>
 class TPQueue {
  private:
-	  T arr[size] = { 0 };
-	  int first, last, count;
+    T arr[size] = { 0 };
+    int first, last, count;
  public:
-	  TQueue(): first(0),last(0),count(0) {}
-	  void push(const T& value) {
-		  if (count == size) {
-			  throw std::string("FULL!");
-		  }
+    TQueue(): first(0),last(0),count(0) {}
+    void push(const T& value) {
+      if (count == size) {
+	throw std::string("FULL!");
+      }
 		  ++count;
 		  int m = last;
 		  for (int i = first; i < last; i++) {
