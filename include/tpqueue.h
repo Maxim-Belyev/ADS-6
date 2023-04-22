@@ -29,7 +29,7 @@ public:
     }
     T& pop() {
       if (count == 0) {
-        throw std::string("Empty!")
+        throw std::string("Empty!");
       } else {
          --count;
         return arr[first++ % size];
