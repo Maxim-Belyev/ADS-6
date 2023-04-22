@@ -6,8 +6,8 @@ template<typename T, int size>
 class TPQueue {
   T arr[size];
   int first, last, count;
-public:
-  TQueue(): first(0),last(0),count(0) {}
+ public:
+  TQueue(): arr(new T[size]), first(0),last(0),count(0) {}
   void push(const T& value) {
       if (count == size) {
         throw std::string("FULL!");
